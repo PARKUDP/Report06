@@ -26,7 +26,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'jp.ac.uryukyu.ie.e225752_e225755_e225758.App'
+    mainClass = 'Main'
 }
 
 tasks.named('test') {
@@ -36,6 +36,6 @@ tasks.named('test') {
 
 jar {
     mainfest{
-        attributes "Main-Class" : "jp.ac.uryukyu.ie.e225752_e225755_e225758.App"
+        attributes  "Main-Class": "Main"
     }
 }
