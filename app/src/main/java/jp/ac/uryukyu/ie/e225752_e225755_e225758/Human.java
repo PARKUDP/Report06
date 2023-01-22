@@ -29,14 +29,6 @@ public class Human {
         String drawed_card = card_list[randint];
         hand.add(drawed_card);
         Cardlist.remove(drawed_card);
-        
-        //得点計算としてdrawされたカードの点数を記憶。
-        if(drawed_card.matches(".*[0-9].*"))){
-            score += drawed_card.replaceAll("[^0-9]", "");
-        }else{
-            if 
-
-        }
 
         return drawed_card;
     }
