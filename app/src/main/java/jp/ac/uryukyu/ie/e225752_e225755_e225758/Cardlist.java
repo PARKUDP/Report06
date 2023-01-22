@@ -8,24 +8,24 @@ public class Cardlist {
     public void Make_Cardlist(){
         for(int i = 1; i <= 11; i++){
             if(i == 1){
-                card_list.add("Spade A");
-                card_list.add("Heart A");
-                card_list.add("Diamond A");
-                card_list.add("Club A");
+                card_list.add("♤ A");
+                card_list.add("♡ A");
+                card_list.add("♢ A");
+                card_list.add("♧ A");
             }
             if(i == 11){
                 for(String a: Card_Pattern){
-                    card_list.add("Spade "+ a);
-                    card_list.add("Heart "+ a);
-                    card_list.add("Diamond "+ a);
-                    card_list.add("Club "+ a);
+                    card_list.add("♤ "+ a);
+                    card_list.add("♡ "+ a);
+                    card_list.add("♢ "+ a);
+                    card_list.add("♧ "+ a);
                 }
                 
             }
-            card_list.add("Spade " + i);
-            card_list.add("Heart "+ i);
-            card_list.add("Diamond "+ i);
-            card_list.add("Club "+ i);
+            card_list.add("♤ " + i);
+            card_list.add("♡ "+ i);
+            card_list.add("♢ "+ i);
+            card_list.add("♧ "+ i);
         }
         card_list.add("Black Joker");
         card_list.add("Color Joker");
@@ -38,4 +38,12 @@ public class Cardlist {
     public void Card_add(String Card_name){
         card_list.add(Card_name);
     }
+
+    //getterメソッドを追加する。
+    public ArrayList getCardList(){
+        return card_list;
+    }
+
+
+    
 }

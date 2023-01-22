@@ -1,11 +1,15 @@
 package jp.ac.uryukyu.ie.e225752_e225755_e225758;
+import java.util.Random;
+import java.util.Arraylist;
 
-public class Human extends Cardlist {
+
+public class Human {
 
 
     //フィールド記述。
     String name;
     Arraylist hand = new Arraylist<>();
+    int score = 0;
     
 
 
@@ -21,15 +25,26 @@ public class Human extends Cardlist {
     public String draw(){
         Random rd = new Random;
         int randint = rd.nextInt(card_list.size());
+        ArrayList card_list = Cardlist.getCardList();
         String drawed_card = card_list[randint];
         hand.add(drawed_card);
-        card_list.remove(drawed_card);
+        Cardlist.remove(drawed_card);
+        
+        //得点計算としてdrawされたカードの点数を記憶。
+        if(drawed_card.matches(".*[0-9].*"))){
+            score += drawed_card.replaceAll("[^0-9]", "");
+        }else{
+            if 
+
+        }
+
         return drawed_card;
     }
 
     
     //ドローした後の合計得点を示すメソッド。
     public int totalValue(){
+
 
 
     }
