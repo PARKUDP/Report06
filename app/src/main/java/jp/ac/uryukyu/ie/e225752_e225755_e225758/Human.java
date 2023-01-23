@@ -1,6 +1,7 @@
 package jp.ac.uryukyu.ie.e225752_e225755_e225758;
 import java.util.Random;
 import java.util.Arraylist;
+import org.apache.commons.lang3.StringUtils;
 
 
 public class Human {
@@ -11,7 +12,6 @@ public class Human {
     Arraylist hand = new Arraylist<>();
     int score = 0;
     
-
 
     //コンストラクタを記述。
     Human(String _name){
@@ -36,12 +36,27 @@ public class Human {
     
     //ドローした後の合計得点を示すメソッド。
     public int totalValue(){
-
-
-
+        int totalvalue = 0;
+        for(int i = 0; i < hand.size(); i++){
+            String card = hand[i];
+            String cardvalue = card.charAt(2);
+            
+            if(boolean isNumeric = StringUtils.isNumeric(cardvalue)){
+                totalvalue += cardvalue;
+            }
+            if(cardvalue == "J" || cardvalue == "Q" || cardvalue =="K"){
+                totalvalue += 10;
+            }
+            if(cardvalue == "A"){
+                if(totalvalue <= 21){
+                    totalvalue += 11;
+                }else{
+                    totalvalue += 1;
+                }
+            }
+        }
+        return totalvalue;
     }
-
-
     
 }
 
