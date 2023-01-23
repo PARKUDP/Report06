@@ -13,12 +13,7 @@ public class Human {
     int score = 0;
     
 
-    //コンストラクタを記述。
-    Human(String _name){
-        this.name = _name;
-    }
-
-
+    
 
     //メソッドを記述。
     //ランダムを用いてカードリストから選び、手札に追加するメソッド。
