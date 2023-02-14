@@ -15,8 +15,10 @@ public class Main {
             Player player1 = new Player("Aさん", cl);
             //Player plyer2 = new Player("Bさん", cl);
         }
+        while(true){
 
 
+        }
     }
     
     
