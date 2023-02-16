@@ -4,9 +4,9 @@ import java.util.Arrays;
 import org.junit.jupiter.api.Test;
 
 class CardlistTest {
-    @Test void CardlistTest(){
-        Cardlist card_list = new Cardlist();
-        card_list.Make_Cardlist();
-        System.out.println(card_list.toString());
+    @Test
+    void cardlistTest(){
+        Cardlist cardlist = new Cardlist();
+        System.out.println(cardlist.card_list);
     }
 }
