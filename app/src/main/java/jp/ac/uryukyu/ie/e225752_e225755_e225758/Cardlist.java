@@ -2,8 +2,12 @@ package jp.ac.uryukyu.ie.e225752_e225755_e225758;
 import java.util.ArrayList;
 
 public class Cardlist {
-    ArrayList card_list = new ArrayList<>();
+    ArrayList<String> card_list = new ArrayList<String>();//型を指定
     String[] Card_Pattern = {"J", "K", "Q"};
+
+    public Cardlist(){
+        Make_Cardlist();
+    }
     
     public void Make_Cardlist(){
         for(int i = 1; i <= 11; i++){
@@ -22,25 +26,27 @@ public class Cardlist {
                 }
                 
             }
-            card_list.add("♤ " + i);
-            card_list.add("♡ "+ i);
-            card_list.add("♢ "+ i);
-            card_list.add("♧ "+ i);
+            if (i>1 && i<11){
+                card_list.add("♤ "+i);
+                card_list.add("♡ "+i);
+                card_list.add("♢ "+i);
+                card_list.add("♧ "+i);
+            }
         }
         card_list.add("Black Joker");
         card_list.add("Color Joker");
     }
     
-    public void Card_remove(String Card_name){
+    public static void Card_remove(String Card_name){
         card_list.remove(Card_name);
     }
     
-    public void Card_add(String Card_name){
+    public static void Card_add(String Card_name){
         card_list.add(Card_name);
     }
 
     //getterメソッドを追加する。
-    public ArrayList getCardList(){
+    public static ArrayList<String> getCardList(){
         return card_list;
     }
 
