@@ -6,7 +6,6 @@ import org.apache.commons.lang3.StringUtils;
 import jp.ac.uryukyu.ie.e225752_e225755_e225758.Cardlist;
 
 
-
 public class Human {
 
 
@@ -82,7 +81,9 @@ public class Human {
             }else{
                 totalvalue += 21 - totalvalue;
             }  
-        }       
+        } 
+        if(totalvalue > 21){
+            totalvalue = 0;      
         System.out.println(totalvalue);
         return totalvalue;
     }
